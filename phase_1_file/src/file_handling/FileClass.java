@@ -1,9 +1,10 @@
 package file_handling;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import java.io.File;
-
+import java.io.FileNotFoundException;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 	import java.io.IOException;
@@ -46,18 +47,51 @@ import java.io.FileWriter;
 				}
 				break;
 				case 2 :System.out.println("enter the name of the file to be deleted");
+				
 				String fn = scanner.next();
 				fn = fn.concat(".txt");
 				System.out.println(fn);
+				
 				File myObj = new File(fn); 
+				
 				if (myObj.delete()) { 
 				      System.out.println("Deleted the file: " + myObj.getName());
-				    } else {
-				      System.out.println("Failed to delete the file.");
-				    } 
+				
+				}
+				else{
+				
+					System.out.println("the file you entered not exist");
+				}
+				
+				
 				break;
 			//default:System.out.println("invalid choices...please go to main menu");
+				
+				case 3:File my_file_dir = new File("/Users/bijithmp/Desktop/phase_1/phase_1_file");
+				String pathnames [];
+
+				if (my_file_dir.exists()) 
+				  {
+				   System.out.println("The directory or file exists.\n");
+				   System.out.println("files"+my_file_dir.getName());
+				   pathnames = my_file_dir.list();
+				   Arrays.sort(pathnames);
+				   
+				   
+				   for (String pathname : pathnames) {
+					    // Print the names of files and directories
+					    System.out.println(pathname);
+					}
+				  } 
+				else
+				 {
+				   System.out.println("The directory or file does not exist.\n");
+				 }
+
+
+				
 				}
+				
 			} while(c==0);
 				
 			
