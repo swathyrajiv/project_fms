@@ -1,0 +1,54 @@
+package file_handling;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+
+public class Binary {
+	public static void main(String args[]) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("enter the name of file to be created");	
+		String filename;
+		filename =scanner.next() ;
+		filename = filename.concat(".txt");
+		System.out.println(filename);
+		
+		
+				
+				
+				
+			  
+				   try(FileWriter fw=new FileWriter(filename);
+							
+							BufferedWriter bw=new BufferedWriter(fw);
+							){
+						System.out.println("your file created successfully");
+						System.out.println("enter the data to be written on file  ");
+						String inputString;
+						inputString = scanner.next();
+						 bw.write(inputString);
+						
+					
+					
+						System.out.println("Messages written to file successfully");
+						
+						
+						
+					
+						
+					}
+					catch (IOException e) {
+						System.out.println(e);
+					}
+			   
+				
+				
+		
+	
+}
+}

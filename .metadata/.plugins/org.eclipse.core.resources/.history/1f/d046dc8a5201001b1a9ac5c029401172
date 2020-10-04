@@ -1,0 +1,13 @@
+package file_handling;
+
+import java.util.Arrays;
+
+public class Binary {
+	public static void main(String args[]) {
+		String arr[] = {"asw","qwe","ewe","dd","fre"};
+		//int [] arrint ={1,2,3,4,5};
+		//System.out.println(Arrays.binarySearch(arrint, 2));
+		System.out.println(Arrays.binarySearch(arr, "dd"));
+	
+}
+}
