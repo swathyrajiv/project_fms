@@ -27,6 +27,7 @@ import java.io.FileWriter;
 			System.out.println("developed by simplylearn.\tquality is our priority\n");
 			
 			do {
+				//menu options
 				System.out.println("MENU OPTIONS ");
 				System.out.println("press 1 for file insertion");
 				System.out.println("press 2 for file deletion ");
@@ -122,7 +123,7 @@ import java.io.FileWriter;
 							
 							 myObj = new File(fn); 
 							myObj.delete();
-							System.out.println("file found in the  directory ,deleted the file"+myObj.getName());
+							System.out.println("file found in the  directory ,deleted the file "+myObj.getName());
 							break;
 						}
 						else {
